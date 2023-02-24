@@ -2,8 +2,12 @@
   "name": "husky-pre-push",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
+    "dev": "NODE_ENV=development ts-node-dev -r tconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn .",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p tsconfig-build.json",
+    "start": "NODE_ENV=production node dist/index.js",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:unit": "npm test -- --watch --silent -c jest-unit-config.ts",
     "test:unit:log": "npm test -- --watch -c jest-unit-config.ts",
