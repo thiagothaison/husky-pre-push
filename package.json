@@ -16,7 +16,8 @@
     "test:integration": "npm test -- --watch --silent -c jest-integration-config.ts",
     "test:integration:log": "npm test -- --watch -c jest-integration-config.ts",
     "test:staged": "npm test -- -c jest-unit-config.ts --findRelatedTests",
-    "test:coverage": "npm test -- --coverage --silent"
+    "test:coverage": "npm test -- --coverage --silent",
+    "postinstall": "husky install"
   },
   "repository": {
     "type": "git",
