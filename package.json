@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests --no-cache --runInBand",
+    "test:unit": "npm test -- --watch --silent -c jest-unit-config.ts",
+    "test:unit:log": "npm test -- --watch -c jest-unit-config.ts",
+    "test:integration": "npm test -- --watch --silent -c jest-integration-config.ts",
+    "test:integration:log": "npm test -- --watch -c jest-integration-config.ts",
+    "test:staged": "npm test -- -c jest-unit-config.ts --findRelatedTests",
+    "test:coverage": "npm test -- --coverage --silent"
   },
   "repository": {
     "type": "git",
