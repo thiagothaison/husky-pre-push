@@ -9,7 +9,7 @@
     "build": "npm run clean && tsc -p tsconfig-build.json",
     "start": "NODE_ENV=production node dist/index.js",
     "lint": "eslint .",
-    "lint:fix": "yarn lint --fix",
+    "lint:fix": "npm run lint --fix",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:unit": "npm test -- --watch --silent -c jest-unit-config.ts",
     "test:unit:log": "npm test -- --watch -c jest-unit-config.ts",
